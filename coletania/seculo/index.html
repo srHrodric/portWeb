@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Seculo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./main.css'>
+</head>
+<body>
+    <div id='head'>
+        <h2 class='text-space'>Digite um ano e veja o retorno do século ao qual ele ano faz parte.</h2>
+        <h4 class='text-space'>Desenvolvido em JavaScript e PHP com uma função que receba o parâmetro.</h4>
+        <div id='pergunta' class='mt-1 mb-1'>
+            <label for="ano">Digite o Ano da Dúvida</label>
+            <input type="text" name="ano" id="ano" maxlength='4'>
+            <button id='btn'>Resposta</button>
+        </div>
+    </div>
+    
+    <div id='body-page'>
+        <div class='text-space' id='resposta'></div>
+    </div>
+    
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).keydown(function(e) {
+            if (e.keyCode == 32){ 
+                return false;
+            }
+
+            if (e.keyCode == 13){ 
+                $('#btn').click();
+            }else if (e.keyCode == 8 || e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode >= 96 && e.keyCode <= 105){
+                return true;
+            }else{
+                return false;
+            }
+        });
+
+        $('#btn').on('click',()=>{
+            let ano = $('#ano').val();
+            ano.trim()
+
+            let teste = ano.indexOf("0");
+            
+            
+            if (ano == '') {
+                alert('Digite o Ano da Dúvida.');
+            }else if (teste == 0) {
+                alert('Valor iniciado com 0, não é permitido.');
+            }else{
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+
+                    let retorno = this.responseText;
+                    $('#resposta').html(`O Ano ${ano}, está no Século ${retorno}.`);
+                    $('#ano').val('');
+                    document.querySelector('#body-page').style.background = `url(./img/${retorno}.jpg) center #B7990D`;
+                }
+                xhttp.open("GET", "main.php?ano="+ano);
+                xhttp.send();
+            }
+        });
+    </script>
+</body>
+</html>
