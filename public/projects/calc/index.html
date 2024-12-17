@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculadora</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="../projects/calc/img/logo.png" >
+    <link rel='stylesheet' type='text/css' media='screen' href='../projects/calc/css/main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="btn2">
+        <a href="index.html"><strong><i class='fas fa-arrow-rotate-left'></i></strong></a>
+    </div>
+    <div class="btn">
+        <strong><i class='fas fa-sun'></i></strong>
+        <strong><i class='fas fa-moon'></i></strong>
+    </div>
+    <div class="container">
+        <form name="calc" class="calculator">
+            <input type="text" name="txt" class="value" readonly>
+            <span class="num clear" onclick='calc.txt.value= ""'><i>C</i></span>
+            <span class="num" onclick='calc.txt.value+= "/"'><i>/</i></span>
+            <span class="num" onclick='calc.txt.value+= "*"'><i>*</i></span>
+            <span class="num" onclick='calc.txt.value+= "7"'><i>7</i></span>
+            <span class="num" onclick='calc.txt.value+= "8"'><i>8</i></span>
+            <span class="num" onclick='calc.txt.value+= "9"'><i>9</i></span>
+            <span class="num" onclick='calc.txt.value+= "-"'><i>-</i></span>
+            <span class="num" onclick='calc.txt.value+= "4"'><i>4</i></span>
+            <span class="num" onclick='calc.txt.value+= "5"'><i>5</i></span>
+            <span class="num" onclick='calc.txt.value+= "6"'><i>6</i></span>
+            <span class="num soma" onclick='calc.txt.value+= "+"'><i>+</i></span>
+            <span class="num" onclick='calc.txt.value+= "1"'><i>1</i></span>
+            <span class="num" onclick='calc.txt.value+= "2"'><i>2</i></span>
+            <span class="num" onclick='calc.txt.value+= "3"'><i>3</i></span>
+            <span class="num" onclick='calc.txt.value+= "0"'><i>0</i></span>
+            <span class="num" onclick='calc.txt.value+= "00"'><i>00</i></span>
+            <span class="num" onclick='calc.txt.value+= "."'><i>.</i></span>
+
+            <span class="num igual" onclick='document.calc.txt.value=eval(calc.txt.value)'><i>=</i></span>
+        </form>
+    </div>
+    <script src='../projects/calc/js/main.js'></script>
+</body>
+</html>
