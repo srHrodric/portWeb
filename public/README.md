@@ -17,10 +17,7 @@ Na primeira visita, o site verifica o idioma preferido do navegador:
 A detecção usa `navigator.language` / `navigator.languages`, não geolocalização nem IP.
 
 ## Personalização antes de publicar
-Substitua nos arquivos HTML:
-- `SEU_EMAIL_AQUI` pelo e-mail profissional.
-- `SEU_NUMERO_COM_DDI` pelo WhatsApp em formato internacional, somente números.
-- `SEU_PERFIL` pelo identificador do LinkedIn.
+Os dados de contato já estão preenchidos nos arquivos HTML: e-mail, WhatsApp e LinkedIn.
 
 Revise as descrições de Alli Solutions e Serlares. Elas estão marcadas como conteúdo a completar para não inventar atribuições ou resultados.
 
