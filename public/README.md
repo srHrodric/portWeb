@@ -2,31 +2,26 @@
 
 Site estático responsivo em português e inglês, preparado para Firebase Hosting.
 
-## Arquivos
-- `index.html` / `projects.html`: versão em português
-- `index-en.html` / `projects-en.html`: versão em inglês
-- `styles.css`: estilos compartilhados
-- `script.js`: detecção de idioma, seletor manual e menu mobile
+## Estrutura
+- `index.html` / `projects.html`: conteúdo em português.
+- `index-en.html` / `projects-en.html`: conteúdo em inglês.
+- `styles.css`: identidade visual e componentes responsivos.
+- `script.js`: idioma inicial, seletor manual, menu mobile e seleção do currículo conforme a página aberta.
+- `curriculos/`: local dos currículos em PDF.
 
-## Idioma
-Na primeira visita, o site verifica o idioma preferido do navegador:
-- Navegador em inglês: abre a versão inglesa.
-- Outros idiomas: abre português.
-- O visitante pode trocar pelo seletor EN/PT no menu. A escolha manual fica salva no navegador.
+## Posicionamento
+O portfólio apresenta Rodrigo Santos como Desenvolvedor de Sistemas Web, com foco em backend, análise de requisitos, compreensão de processos e construção de soluções adequadas à realidade do negócio. A trajetória distingue experiência em tecnologia desde 2017 e desenvolvimento web desde 2020.
 
-A detecção usa `navigator.language` / `navigator.languages`, não geolocalização nem IP.
+## Conteúdo profissional
+As experiências na Alli Solutions, Serlares Refeições Coletivas, desenvolvimento freelancer e suporte técnico foram descritas a partir das atividades informadas. Não foram criados números, métricas, resultados ou tecnologias não confirmados.
 
-## Personalização antes de publicar
-Os dados de contato já estão preenchidos nos arquivos HTML: e-mail, WhatsApp e LinkedIn.
-
-Revise as descrições de Alli Solutions e Serlares. Elas estão marcadas como conteúdo a completar para não inventar atribuições ou resultados.
-
-## Firebase Hosting
-Copie os arquivos desta pasta para a pasta configurada como `public` no seu `firebase.json`. Preserve `firebase.json` e `.firebaserc`. Depois execute `firebase deploy`.
+ChurchLog é apresentado como projeto próprio e estudo de caso principal, destacando arquitetura SaaS multi-tenant, isolamento de dados, modelagem, autenticação, permissões, módulos e infraestrutura. Itens em evolução são identificados como planejamento/implementação em andamento, não como entregas concluídas.
 
 ## Currículos
-A pasta `curriculos/` é destinada aos dois arquivos PDF:
-- `curriculo-pt.pdf`: currículo em português.
-- `curriculo-en.pdf`: currículo em inglês.
+Adicione os arquivos `curriculo-pt.pdf` e `curriculo-en.pdf` dentro de `curriculos/`. O botão de download acompanha o idioma da página aberta.
 
-Coloque os PDFs nessa pasta mantendo exatamente esses nomes. O botão **Baixar currículo / Download CV** seleciona o arquivo conforme o idioma preferido configurado no navegador (inglês para navegadores em inglês; português para os demais). Essa seleção é independente do idioma escolhido manualmente para visualizar o site.
+## Publicação no Firebase Hosting
+Copie o conteúdo desta pasta para o diretório configurado como `public` no `firebase.json`, preservando os arquivos de configuração do projeto. Em seguida, execute `firebase deploy`.
+
+
+A DK Mídia e Publicidade foi incluída como iniciativa empreendedora em desenvolvimento, em seção separada dos projetos técnicos e da experiência profissional. Site: https://dk-midiapublicidade.web.app/.
