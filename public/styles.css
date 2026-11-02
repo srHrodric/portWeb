@@ -2,3 +2,31 @@
 
 .lang-switch{font:10px var(--mono);letter-spacing:1px;color:var(--accent)!important;border:1px solid #315248;border-radius:3px;padding:8px 10px}
 @media(max-width:600px){.lang-switch{align-self:flex-start}}
+
+
+/* Portfolio content additions */
+.section-intro{max-width:780px;color:var(--muted);font-size:14px;line-height:1.9;margin:18px 0 0}
+.approach-grid .skill-card{min-height:205px}
+.approach-grid .skill-card h3{margin-top:22px}
+.experience-list{border-top:1px solid var(--line)}
+.experience-item{display:grid;grid-template-columns:190px 1fr;gap:38px;padding:30px 0;border-bottom:1px solid var(--line)}
+.experience-date{font:10px var(--mono);letter-spacing:1px;color:var(--accent);padding-top:8px}
+.experience-item h3{font-size:19px;margin:0 0 10px}
+.experience-item h3 span{font-weight:500;color:var(--muted)}
+.experience-item p,.project-info p{max-width:790px}
+.experience-item p{font-size:13px;color:var(--muted);line-height:1.9;margin:0 0 15px}
+.tech-columns{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.tech-columns>div{padding:23px;background:var(--panel);border:1px solid var(--line);border-radius:5px}
+.tech-columns h3{font-size:15px;margin:0 0 8px}
+.tech-columns p{font-size:12px;color:var(--muted);margin:0;line-height:1.8}
+.contact-caption{max-width:480px;color:var(--muted);font-size:12px;line-height:1.8;margin:18px 0 0}
+.work-heading{margin:100px 0 35px;padding-top:55px;border-top:1px solid var(--line)}
+.work-heading h2{font-size:clamp(32px,4vw,44px);line-height:1.2;letter-spacing:-2px;margin:0}
+.project-info h3{font-size:16px;margin:22px 0 8px}
+.detail-list{padding-left:18px;color:var(--muted);font-size:12px;line-height:1.9}
+.detail-list li{padding:3px 0}
+.art-freelance{background:radial-gradient(circle,#24483f,#111d2b 70%)}
+.art-support{background:radial-gradient(circle,#45405c,#141b2a 70%)}
+.featured-project{border-top:0;padding-top:0}
+@media(max-width:800px){.experience-item{grid-template-columns:1fr;gap:8px}.experience-date{padding-top:0}.tech-columns{grid-template-columns:1fr}}
+@media(max-width:600px){.approach-grid .skill-card{min-height:170px}.work-heading{margin-top:65px;padding-top:35px}.experience-item{padding:24px 0}}
